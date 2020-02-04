@@ -9,16 +9,18 @@ class Atm
         @funds -= amount
     end
     def withdraw(amount, account)
-
         case
-    
-        when amount > account.balance
-        return
+        when amount >account.balance
+            
         else
-        @funds -= amount
-        account.balance = account.balance - amount
-        { status: true, message: 'success', date: Date.today, amount: amount}
-    end
-    end
-end
+            @funds -= amount
+            { status: true, message: 'success', date: Date.today, amount: amount}
+            
+        end
 
+        
+        
+    end
+
+
+end
