@@ -28,14 +28,12 @@ class Atm
     def insufficient_funds_in_account?(amount, account)
         amount > account.balance
     end
-
-    private
+ 
 
     def insufficient_funds_in_atm?(amount)
         @funds < amount
     end
-
-    private
+    
 
     def incorrect_pin?(pin_code, actual_pin)
         pin_code != actual_pin
@@ -51,7 +49,7 @@ class Atm
         denominations = [20, 10, 5]
         bills = []
         denominations.each do |bill|
-            while amount - bill >=0
+            while amount - bill >= 0
                 amount -= bill
                 bills << bill
             end
