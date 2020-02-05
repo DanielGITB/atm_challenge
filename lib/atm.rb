@@ -29,13 +29,10 @@ class Atm
         amount > account.balance
     end
 
-    private
 
     def insufficient_funds_in_atm?(amount)
         @funds < amount
     end
-
-    private
 
     def incorrect_pin?(pin_code, actual_pin)
         pin_code != actual_pin
