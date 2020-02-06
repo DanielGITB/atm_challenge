@@ -1,14 +1,11 @@
 require './lib/account.rb'
+require './lib/atm.rb'
 require 'date'
 
 
 describe Account do
-    let(:account) { instance_double('Person', pin_code: '1234', exp_date: '05/20', account_status: :active) }
+    let(:account) { instance_double('Account', pin_code: '1234', exp_date: '05/20', account_status: :active) }
 
-    before do
-        allow(account).to receive(:balance).and_return(100)
-        allow(account).to receive(:balance=)
-    end
 
     it 'check the length of a number' do
         number = rand(1000..9999)
