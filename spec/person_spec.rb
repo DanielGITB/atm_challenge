@@ -25,8 +25,8 @@ describe Person do
         it 'of Account class' do
             expect(subject.account).to be_an_instance_of Account
         end
-        it 'with himself as an owner' do #asdjfhbaskdjlhfbalksjdnflkiajsnhdflkijabnsdlfkjunbhasdlkifjbnhnhaslkidjufnhbulaiksjudhnbflikasdhnbflikajujshnbdflikjuhnjuasndfk
-            expect(subject.account.owner).to be (subject.name) #keep track on this one
+        it 'with himself as an owner' do 
+            expect(subject.account.owner).to be (subject.name) 
         end
     end
 
