@@ -4,17 +4,20 @@ require './lib/atm'
 class Person
     attr_accessor :name, :cash, :account
 
+
+
+
     def initialize(attrs = {})
         @name = set_name(attrs[:name])
         @cash = 0
-        @account = nil
+        @account = nil 
     end
 
 
 
 
     def create_account
-        @account = Account.new(owner: self)
+        @account = Account.new(owner: name)
     end
 
     def deposit(amount)
