@@ -10,6 +10,9 @@ class Person
         @account = nil
     end
 
+
+
+
     def create_account
         @account = Account.new(owner: self)
     end
