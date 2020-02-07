@@ -6,14 +6,14 @@ class Person
     def initialize(attrs = {})
         @name = set_name(attrs[:name])
         @cash = 0
-        @account = nil
+        @account = nil 
     end
 
 
 
 
     def create_account
-        @account = Account.new(owner: self)
+        @account = Account.new(owner: name)
     end
 
     def deposit(amount)
@@ -21,9 +21,9 @@ class Person
     end
 
     def withdraw(args = {})
-        @account == nil ? missing_account : withdraw_fund(args)
+        @account == nil ? missing_account : withdraw_funds(args)
     end
-    
+
     private
 
     def deposit_funds(amount)
