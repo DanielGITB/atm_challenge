@@ -1,4 +1,5 @@
 require './lib/account'
+require './lib/atm'
 
 class Person
     attr_accessor :name, :cash, :account
@@ -14,9 +15,12 @@ class Person
     end
 
     def deposit(amount)
-        @account == nil ? missing_account : withdraw_funds(args)
+        @account == nil ? missing_account : deposit_funds(amount)
     end
 
+    def withdraw(args = {})
+        @account == nil ? missing_account : withdraw_funds(args)
+    end
 
     private
 

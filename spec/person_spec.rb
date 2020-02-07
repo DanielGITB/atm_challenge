@@ -1,7 +1,9 @@
-require './lib/person'
-require './lib/atm'
+require './lib/person.rb'
+require './lib/atm.rb'
+require './lib/account.rb'
 
 describe Person do
+    
     subject { described_class.new(name: 'Thomas')}
 
     it 'is expected to have a :name on initialize' do
