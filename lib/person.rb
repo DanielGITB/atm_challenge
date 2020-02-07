@@ -9,15 +9,21 @@ class Person
         @account = nil
     end
 
+
+
+
     def create_account
         @account = Account.new(owner: self)
     end
 
     def deposit(amount)
-        @account == nil ? missing_account : withdraw_funds(args)
+        @account == nil ? missing_account : deposit_funds(amount)
     end
 
-
+    def withdraw(args = {})
+        @account == nil ? missing_account : withdraw_fund(args)
+    end
+    
     private
 
     def deposit_funds(amount)

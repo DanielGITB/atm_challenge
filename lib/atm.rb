@@ -21,7 +21,6 @@ class Atm
             { status: false, message: "wrong pin", date: Date.today}
         when card_expired?(account.exp_date)
             { status: false, message: 'card expired', date: Date.today }
-            { status: false, message: 'wrong pin', date: Date.today}
         when card_expired?(account.exp_date)
             { status: false, message: 'card expired', date: Date.today }
         when account_is_disabled?(account.account_status)
@@ -31,8 +30,8 @@ class Atm
         end
     end
 
-    got: {:date=>#<Date: 2020-02-07 ((2458887j,0s,0n),+0s,2299161j)>, :message=>"wrong pin", :status=>false}
-    expected: {:date=>#<Date: 2020-02-07 ((2458887j,0s,0n),+0s,2299161j)>, :message=>"card expired", :status=>false}
+    #got: {:date=>#<Date: 2020-02-07 ((2458887j,0s,0n),+0s,2299161j)>, :message=>"wrong pin", :status=>false}
+    #expected: {:date=>#<Date: 2020-02-07 ((2458887j,0s,0n),+0s,2299161j)>, :message=>"card expired", :status=>false}
 
 
     private

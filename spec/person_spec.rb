@@ -17,7 +17,7 @@ describe Person do
         expect(subject.cash).to eq 0
     end
 
-    it 'expected to have :account attribute' do 
+    it 'expected to have :account attribgit ute' do 
        expect(subject.account).to be nil
     end
 
@@ -29,7 +29,7 @@ describe Person do
     end
 
     it 'with himself as an owner' do
-        expect(subject.account.owner).to be subject #keep track on this one
+        expect(subject.account.owner).to be (subject.name) #keep track on this one
     end
 
     describe 'can manage funds if an account been created' do
