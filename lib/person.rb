@@ -38,6 +38,10 @@ class Person
         @cash += response[:amount]
     end
 
+    def set_name(name)
+        name == nil ? missing_name : name
+    end
+
     def missing_name
         raise ArgumentError, 'A name is required'
     end
